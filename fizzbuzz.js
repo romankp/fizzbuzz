@@ -1,9 +1,13 @@
+const eq = (i, num) => {
+  return i % num === 0;
+};
+
 const formatResponse = i => {
-  if (i % 3 === 0 && i % 5 === 0) {
+  if (eq(i, 3) && eq(i, 5)) {
     return 'fizzbuzz';
-  } else if (i % 3 === 0) {
+  } else if (eq(i, 3)) {
     return 'fizz';
-  } else if (i % 5 === 0) {
+  } else if (eq(i, 5)) {
     return 'buzz';
   }
   return i;
